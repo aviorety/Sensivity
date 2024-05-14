@@ -35,6 +35,20 @@ end
 
 
 function Tab:update()
+    for _, object in self.container:GetChildren() do
+        if object.Name ~= 'TopSections' then
+            continue
+        end
+
+        if object ~= self.top_sections then
+            object.Visible = false
+
+            continue
+        end
+
+        object.Visible = true
+    end
+
     for _, object in self.tabs:GetChildren() do
         if object.Name ~= 'Tab' then
             continue
@@ -72,13 +86,9 @@ function Tab:create()
 
     tab.MouseButton1Click:Connect(function()
         Tab.update({
+            top_sections = top_sections,
             tabs = self.container.Tabs,
             tab = tab
-        })
-
-        self.TopSections.update({
-            top_sections = top_sections,
-            container = self.container
         })
     end)
 
