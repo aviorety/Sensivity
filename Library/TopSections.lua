@@ -1,4 +1,8 @@
 local TopSections = {}
+TopSections.assets = {
+    top_sections = game:GetObjects('rbxassetid://17492980293')[1],
+    section = game:GetObjects('rbxassetid://17493046479')[1]
+}
 
 
 function TopSection:update()
