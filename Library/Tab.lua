@@ -59,7 +59,7 @@ function Tab:create()
     tab.TabName.Text = self.name
     tab.IconBackground.Icon.Image = self.icon
 
-    local top_sections = game:GetObjects('rbxassetid://17492980293')[1]
+    local top_sections = TopSections.assets.top_sections:Clone()
 
     if self.container:FindFirstChild('TopSections') then
         top_sections.Visible = false
