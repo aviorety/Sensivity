@@ -77,7 +77,7 @@ function Tab:create()
         })
     end)
 
-    return tab
+    return top_sections
 end
 
 
