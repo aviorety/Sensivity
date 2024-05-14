@@ -60,7 +60,7 @@ function TopSections:create()
 
     if not self.top_sections:FindFirstChild('Section') then
         TopSections.update({
-            top_sections = top_sections,
+            top_sections = self.top_sections,
             section = section
         })
     end
@@ -69,7 +69,7 @@ function TopSections:create()
 
     section.MouseButton1Click:Connect(function()
         TopSections.update({
-            top_sections = top_sections,
+            top_sections = self.top_sections,
             section = section
         })
     end)
