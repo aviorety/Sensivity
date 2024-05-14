@@ -2,7 +2,7 @@ local RunService = game:GetService('RunService')
 
 local Blur = {}
 Blur.id = 0
-Blur.radius = 10
+Blur.radius = 5
 
 local depth_of_field = Instance.new('DepthOfFieldEffect', game:GetService('Lighting'))
 depth_of_field.FarIntensity = 0
