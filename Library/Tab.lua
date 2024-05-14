@@ -51,7 +51,7 @@ end
 
 
 function Tab:create()
-    local tab = game:GetObjects('rbxassetid://17492320826')[1]
+    local tab = game:GetObjects('rbxassetid://17492924358')[1]
     tab.Parent = self.tabs
     tab.TabName.Text = self.name
     tab.IconBackground.Icon.Image = self.icon
