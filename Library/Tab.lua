@@ -3,7 +3,6 @@ local TweenService = game:GetService('TweenService')
 local TopSections = loadstring(game:HttpGet('https://raw.githubusercontent.com/aviorety/Sensivity/main/Library/TopSections.lua'))()
 
 local Tab = {}
-Tab.asset = game:GetObjects('rbxassetid://17492924358')[1]
 
 
 function Tab:open()
