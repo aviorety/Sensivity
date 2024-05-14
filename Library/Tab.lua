@@ -1,7 +1,7 @@
 local TweenService = game:GetService('TweenService')
 
 local Tab = {}
-Tab.asset = game:GetObjects('rbxassetid://17492980293')[1]
+Tab.asset = game:GetObjects('rbxassetid://17492924358')[1]
 
 
 function Tab:open()
