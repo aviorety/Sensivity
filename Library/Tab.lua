@@ -60,7 +60,6 @@ function Tab:create()
 
     if self.container:FindFirstChild('TopSections') then
         top_sections.Visible = false
-        tab.Visible = false
     else
         Tab.update({
             tabs = self.container.Tabs,
