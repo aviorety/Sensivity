@@ -8,30 +8,30 @@ TopSections.assets = {
 
 
 function TopSections:open()
-    TweenService:Create(self, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         BackgroundTransparency = 0.6
     }):Play()
 
-    TweenService:Create(self.UIStroke, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         Transparency = 0.8
     }):Play()
 
-    TweenService:Create(self.SectionName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.SectionName, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         TextTransparency = 0
     }):Play()
 end
 
 
 function TopSections:close()
-    TweenService:Create(self, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         BackgroundTransparency = 1
     }):Play()
 
-    TweenService:Create(self.UIStroke, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         Transparency = 1
     }):Play()
 
-    TweenService:Create(self.SectionName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.SectionName, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         TextTransparency = 0.5
     }):Play()
 end
