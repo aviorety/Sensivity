@@ -4,11 +4,11 @@ local Tab = {}
 
 
 function Tab:open()
-    TweenService:Create(self.IconBackground.ImageTransparency, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         ImageTransparency = 0
     }):Play()
 
-    TweenService:Create(self.IconBackground.Icon.ImageTransparency, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         ImageTransparency = 0
     }):Play()
 
@@ -19,11 +19,11 @@ end
 
 
 function Tab:close()
-    TweenService:Create(self.IconBackground.ImageTransparency, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         ImageTransparency = 1
     }):Play()
 
-    TweenService:Create(self.IconBackground.Icon.ImageTransparency, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         ImageTransparency = 0.5
     }):Play()
 
