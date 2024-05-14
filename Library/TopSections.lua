@@ -59,12 +59,14 @@ function TopSections:create()
     section.SectionName.Text = self.name
 
     if not self.top_sections:FindFirstChild('Section') then
+        section.Parent = self.top_sections
+
         TopSections.update({
             top_sections = self.top_sections,
             section = section
         })
     end
-    
+
     section.Parent = self.top_sections
 
     section.MouseButton1Click:Connect(function()
