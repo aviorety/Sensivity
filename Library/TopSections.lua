@@ -9,7 +9,11 @@ TopSections.assets = {
 
 function TopSections:open()
     TweenService:Create(self, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-        BackgroundTransparency = 0
+        BackgroundTransparency = 0.6
+    }):Play()
+
+    TweenService:Create(self.UIStroke, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+        Transparency = 0.8
     }):Play()
 
     TweenService:Create(self.SectionName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
@@ -21,6 +25,10 @@ end
 function TopSections:close()
     TweenService:Create(self, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         BackgroundTransparency = 1
+    }):Play()
+
+    TweenService:Create(self.UIStroke, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+        Transparency = 1
     }):Play()
 
     TweenService:Create(self.SectionName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
@@ -51,7 +59,7 @@ function TopSections:create()
     section.SectionName.Text = self.name
 
     if not self.top_sections:FindFirstChild('Section') then
-        TopSections:open(section)
+        TopSections.open(section)
     end
     
     section.Parent = self.top_sections
