@@ -59,7 +59,10 @@ function TopSections:create()
     section.SectionName.Text = self.name
 
     if not self.top_sections:FindFirstChild('Section') then
-        TopSections.open(section)
+        TopSections.update({
+            top_sections = top_sections,
+            section = section
+        })
     end
     
     section.Parent = self.top_sections
