@@ -5,30 +5,30 @@ Tab.asset = game:GetObjects('rbxassetid://17492924358')[1]
 
 
 function Tab:open()
-    TweenService:Create(self.IconBackground, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         ImageTransparency = 0
     }):Play()
 
-    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         ImageTransparency = 0
     }):Play()
 
-    TweenService:Create(self.TabName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.TabName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         TextTransparency = 0
     }):Play()
 end
 
 
 function Tab:close()
-    TweenService:Create(self.IconBackground, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         ImageTransparency = 1
     }):Play()
 
-    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         ImageTransparency = 0.5
     }):Play()
 
-    TweenService:Create(self.TabName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.TabName, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         TextTransparency = 0.5
     }):Play()
 end
