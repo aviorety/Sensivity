@@ -1,8 +1,7 @@
 local TweenService = game:GetService('TweenService')
 
-local TopSections = loadstring(game:HttpGet('https://raw.githubusercontent.com/aviorety/Sensivity/main/Library/TopSections.lua'))()
-
 local Tab = {}
+Tab.asset = game:GetObjects('rbxassetid://17492924358')[1]
 
 
 function Tab:open()
@@ -58,7 +57,7 @@ function Tab:create()
     tab.TabName.Text = self.name
     tab.IconBackground.Icon.Image = self.icon
 
-    local top_sections = TopSections.assets.top_sections:Clone()
+    local top_sections = self.TopSections.assets.top_sections:Clone()
 
     if self.container:FindFirstChild('TopSections') then
         top_sections.Visible = false
@@ -77,7 +76,7 @@ function Tab:create()
             tab = tab
         })
 
-        TopSections.update({
+        self.TopSections.update({
             top_sections = top_sections,
             container = self.container
         })
