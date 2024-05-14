@@ -1,6 +1,7 @@
 local TweenService = game:GetService('TweenService')
 
 local Tab = {}
+Tab.asset = game:GetObjects('rbxassetid://17492980293')[1]
 
 
 function Tab:open()
@@ -51,7 +52,7 @@ end
 
 
 function Tab:create()
-    local tab = game:GetObjects('rbxassetid://17492924358')[1]
+    local tab = Tab.asset:Clone()
     tab.Parent = self.container.Tabs
     tab.TabName.Text = self.name
     tab.IconBackground.Icon.Image = self.icon
