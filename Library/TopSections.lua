@@ -12,7 +12,7 @@ function TopSections:open()
         BackgroundTransparency = 0
     }):Play()
 
-    TweenService:Create(self, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.SectionName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         TextTransparency = 0
     }):Play()
 end
@@ -23,7 +23,7 @@ function TopSections:close()
         BackgroundTransparency = 1
     }):Play()
 
-    TweenService:Create(self, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
+    TweenService:Create(self.SectionName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
         TextTransparency = 0.5
     }):Play()
 end
