@@ -23,7 +23,7 @@ function Blur:new()
 	local gToken = math.random(1, gTokenMH)
 
 	local frame = Instance.new('Frame')
-	frame.Parent = self.object
+	frame.Parent = self
 	frame.Size = UDim2.new(0.95, 0, 0.95, 0)
 	frame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	frame.AnchorPoint = Vector2.new(0.5, 0.5)
