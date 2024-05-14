@@ -5,7 +5,7 @@ TopSections.assets = {
 }
 
 
-function TopSection:update()
+function TopSections:update()
     for _, object in self.container:GetChildren() do
         if object.Name ~= 'TopSections' then
             continue
