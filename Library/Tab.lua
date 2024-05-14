@@ -52,13 +52,27 @@ end
 
 function Tab:create()
     local tab = game:GetObjects('rbxassetid://17492924358')[1]
-    tab.Parent = self.tabs
+    tab.Parent = self.container.Tabs
     tab.TabName.Text = self.name
     tab.IconBackground.Icon.Image = self.icon
 
+    local top_sections = game:GetObjects('rbxassetid://17492980293')[1]
+
+    if self.container:FindFirstChild('TopSections') then
+        top_sections.Visible = false
+        tab.Visible = false
+    else
+        Tab.update({
+            tabs = self.container.Tabs,
+            tab = tab
+        })
+    end
+    
+    top_sections.Parent = self.container
+
     tab.MouseButton1Click:Connect(function()
         Tab.update({
-            tabs = self.tabs,
+            tabs = self.container.Tabs,
             tab = tab
         })
     end)
