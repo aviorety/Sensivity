@@ -1,5 +1,7 @@
 local TweenService = game:GetService('TweenService')
 
+local TopSections = loadstring(game:HttpGet('https://raw.githubusercontent.com/aviorety/Sensivity/main/Library/TopSections.lua'))()
+
 local Tab = {}
 Tab.asset = game:GetObjects('rbxassetid://17492924358')[1]
 
@@ -74,6 +76,11 @@ function Tab:create()
         Tab.update({
             tabs = self.container.Tabs,
             tab = tab
+        })
+
+        TopSections.update({
+            top_sections = top_sections,
+            container = self.container
         })
     end)
 
