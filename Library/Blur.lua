@@ -31,7 +31,7 @@ function Blur:new()
 
 	local GenUid; do
 		function GenUid()
-			Blur.id += + 1
+			Blur.id += 1
             
 			return `neon::{tostring(Blur.id)}`
 		end
