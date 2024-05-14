@@ -2,6 +2,9 @@ local UserInputService = game:GetService('UserInputService')
 local TweenService = game:GetService('TweenService')
 local CoreGui = game:GetService('CoreGui')
 
+local Blur = loadstring(game:HttpGet('https://raw.githubusercontent.com/JBxSlash/Roblox-UI-Blur/main/public.lua'))()
+local Tab = loadstring(game:HttpGet('https://raw.githubusercontent.com/aviorety/Sensivity/main/Library/Tab.lua'))()
+
 local Library = {}
 Library.flags = {}
 Library.connections = {}
@@ -43,6 +46,8 @@ function Library:init()
     container.Parent = CoreGui
     container.Container.Size = UDim2.new(0, 0, 0, 0)
 
+    Blur.new(container.Container)
+
     Library.container = container
     Library.open(container)
 
@@ -72,11 +77,15 @@ function Library:init()
             Library.close(container)
         end
     end)
+
+
 end
 
 
 --[[
-local main = Library.init()
+
 ]]
+
+local main = Library.init()
 
 return Library
