@@ -38,18 +38,18 @@ end
 
 
 function TopSections:update()
-    for _, object in self.container:GetChildren() do
-        if object.Name ~= 'TopSections' then
+    for _, object in self.top_sections:GetChildren() do
+        if object.Name ~= 'Section' then
             continue
         end
 
-        if object ~= self.top_sections then
-            object.Visible = false
+        if object ~= self.section then
+            TopSections.close(object)
 
             continue
         end
 
-        object.Visible = true
+        TopSections.open(object)
     end
 end
 
@@ -63,6 +63,13 @@ function TopSections:create()
     end
     
     section.Parent = self.top_sections
+
+    section.MouseButton1Click:Connect(function()
+        TopSections.update({
+            top_sections = top_sections,
+            section = section
+        })
+    end)
 end
 
 
