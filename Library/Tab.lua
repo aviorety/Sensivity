@@ -62,6 +62,8 @@ function Tab:create()
             tab = tab
         })
     end)
+
+    return tab
 end
 
 
