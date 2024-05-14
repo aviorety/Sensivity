@@ -5,15 +5,15 @@ Tab.asset = game:GetObjects('rbxassetid://17492924358')[1]
 
 
 function Tab:open()
-    TweenService:Create(self.IconBackground, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
+    TweenService:Create(self.IconBackground, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         ImageTransparency = 0
     }):Play()
 
-    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
+    TweenService:Create(self.IconBackground.Icon, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         ImageTransparency = 0
     }):Play()
 
-    TweenService:Create(self.TabName, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
+    TweenService:Create(self.TabName, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {
         TextTransparency = 0
     }):Play()
 end
