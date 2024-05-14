@@ -49,7 +49,7 @@ function Tab:update()
         object.Visible = true
     end
 
-    for _, object in self.tabs:GetChildren() do
+    for _, object in self.container.Tabs:GetChildren() do
         if object.Name ~= 'Tab' then
             continue
         end
@@ -77,8 +77,8 @@ function Tab:create()
         top_sections.Visible = false
     else
         Tab.update({
+            container = self.container,
             top_sections = top_sections,
-            tabs = self.container.Tabs,
             tab = tab
         })
     end
@@ -87,8 +87,8 @@ function Tab:create()
 
     tab.MouseButton1Click:Connect(function()
         Tab.update({
+            container = self.container,
             top_sections = top_sections,
-            tabs = self.container.Tabs,
             tab = tab
         })
     end)
