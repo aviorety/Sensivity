@@ -77,6 +77,7 @@ function Tab:create()
         top_sections.Visible = false
     else
         Tab.update({
+            top_sections = top_sections,
             tabs = self.container.Tabs,
             tab = tab
         })
