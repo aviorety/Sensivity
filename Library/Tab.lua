@@ -53,7 +53,7 @@ end
 function Tab:create()
     local tab = game:GetObjects('rbxassetid://17492320826')[1]
     tab.Parent = self.tabs
-    tab.TabName.Text = self.Name
+    tab.TabName.Text = self.name
     tab.IconBackground.Icon.Image = self.icon
 
     tab.MouseButton1Click:Connect(function()
