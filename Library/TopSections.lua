@@ -1,5 +1,8 @@
 local TopSections = {}
-TopSections.asset = game:GetObjects('rbxassetid://17493046479')[1]
+TopSections.assets = {
+    top_sections = game:GetObjects('rbxassetid://17492980293')[1],
+    section = game:GetObjects('rbxassetid://17493046479')[1]
+}
 
 
 function TopSection:update()
@@ -20,9 +23,8 @@ end
 
 
 function TopSections:create()
-    local section = TopSections.asset:Clone()
+    local section = TopSections.assets.section:Clone()
     section.Parent = self.top_sections
-
 end
 
 
