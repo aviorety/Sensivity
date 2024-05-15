@@ -41,14 +41,14 @@ end
 
 
 function TopSections:update()
-    for _, object in self.container:GetChildren() do
+    --[[for _, object in self.container:GetChildren() do
         if not object.Name:find('Sections') or object.Name:find('Top') then
             continue
         end
 
         object.Visible = object == self.left_sections or object == self.right_sections
         object.BackgroundTransparency = 0.5
-    end
+    end]]
 
     for _, object in self.top_sections:GetChildren() do
         if object.Name ~= 'Section' then
@@ -70,38 +70,38 @@ function TopSections:create()
     local section = TopSections.assets.section:Clone()
     section.SectionName.Text = self.name
 
-    local left_sections = TopSections.assets.left_sections:Clone()
-    local right_sections = TopSections.assets.right_sections:Clone()
+    --local left_sections = TopSections.assets.left_sections:Clone()
+    --local right_sections = TopSections.assets.right_sections:Clone()
 
     if not self.top_sections:FindFirstChild('Section') then
         section.Parent = self.top_sections
-        left_sections.Parent = self.container
-        right_sections.Parent = self.container
+        --left_sections.Parent = self.container
+        --right_sections.Parent = self.container
 
         TopSections.update({
-            left_sections = left_sections,
-            right_sections = right_sections,
+            --left_sections = left_sections,
+            --right_sections = right_sections,
             section = section,
 
             container = self.container,
             top_sections = self.top_sections
         })
     else
-        left_sections.Visible = false
-        right_sections.Visible = false
+        --left_sections.Visible = false
+        --right_sections.Visible = false
     end
 
     section.Parent = self.top_sections
-    left_sections.Parent = self.container
-    right_sections.Parent = self.container
+    --left_sections.Parent = self.container
+    --right_sections.Parent = self.container
 
     section.MouseButton1Click:Connect(function()
         left_sections.Visible = true
         right_sections.Visible = true
 
         TopSections.update({
-            left_sections = left_sections,
-            right_sections = right_sections,
+            --left_sections = left_sections,
+            --right_sections = right_sections,
             section = section,
 
             container = self.container,
