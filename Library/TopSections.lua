@@ -42,7 +42,7 @@ end
 
 function TopSections:update()
     for _, object in self.container:GetChildren() do
-        if not object.Name:FindFirstChild('Sections') then
+        if not object.Name:find('Sections') then
             continue
         end
 
