@@ -42,18 +42,11 @@ end
 
 function TopSections:update()
     for _, object in self.container:GetChildren() do
-        if not object.Name:find('Sections') then
+        if not object.Name:find('Sections') or object.Name:find('Top') then
             continue
         end
 
-        if object ~= self.left_sections or object ~= self.right_sections then
-            object.Visible = false
-
-            continue
-        end
-
-        object.Visible = true
-        object.BackgroundTransparency = 0.5
+        object.Visible = object == self.left_sections or object == self.right_sections
     end
 
     for _, object in self.top_sections:GetChildren() do
@@ -79,6 +72,11 @@ function TopSections:create()
     local left_sections = TopSections.assets.left_sections:Clone()
     local right_sections = TopSections.assets.right_sections:Clone()
 
+    if self.container:FindFirstChild('TopSections') then
+        left_sections.Visible = false
+        right_sections.Visible = false
+    end
+
     if not self.top_sections:FindFirstChild('Section') then
         section.Parent = self.top_sections
         left_sections.Parent = self.container
@@ -93,11 +91,6 @@ function TopSections:create()
             top_sections = self.top_sections
         })
     else
-        left_sections.Visible = false
-        right_sections.Visible = false
-    end
-
-    if self.container:FindFirstChild('TopSections') then
         left_sections.Visible = false
         right_sections.Visible = false
     end
