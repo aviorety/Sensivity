@@ -1,3 +1,5 @@
+-- Credits to @ImSnox
+
 local RunService = game:GetService('RunService')
 
 local Blur = {}
